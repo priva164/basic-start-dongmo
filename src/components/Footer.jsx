@@ -1,18 +1,9 @@
 import './Footer.css'
 
 const footerLinks = [
-  { href: '#accueil',  label: 'Accueil' },
-  { href: '#apropos',  label: 'À propos' },
-  { href: '#services', label: 'Nos services' },
-  { href: '#galerie',  label: 'Galerie' },
-  { href: '#contact',  label: 'Contact' },
-]
-
-const poles = [
-  "Bureau d'études & Expertises des Lots Technologiques",
-  'Domotique & Technologies Innovantes',
-  'Vente de matériel technologique',
-  'Solutions Fintechs',
+  { href: '#accueil', label: 'Accueil' },
+  { href: '#galerie', label: 'Nos réalisations' },
+  { href: '#contact', label: 'Contact' },
 ]
 
 export default function Footer() {
@@ -53,24 +44,6 @@ export default function Footer() {
                       onClick={(e) => { e.preventDefault(); scrollTo(link.href) }}
                     >
                       {link.label}
-                    </a>
-                  </li>
-                ))}
-              </ul>
-            </div>
-
-            {/* Pôles */}
-            <div className="footer__col">
-              <h3 className="footer__col-title">Nos pôles</h3>
-              <ul className="footer__list">
-                {poles.map((pole, i) => (
-                  <li key={i}>
-                    <a
-                      href="#services"
-                      className="footer__link"
-                      onClick={(e) => { e.preventDefault(); scrollTo('#services') }}
-                    >
-                      {pole}
                     </a>
                   </li>
                 ))}

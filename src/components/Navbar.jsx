@@ -3,16 +3,14 @@ import './Navbar.css'
 
 const navLinks = [
   { href: '#accueil',  label: 'Accueil' },
-  { href: '#apropos',  label: 'À propos' },
-  { href: '#services', label: 'Nos services' },
-  { href: '#galerie',  label: 'Galerie' },
+  { href: '#galerie',  label: 'Nos réalisations' },
   { href: '#contact',  label: 'Contact' },
 ]
 
 export default function Navbar() {
-  const [scrolled,     setScrolled]     = useState(false)
-  const [menuOpen,     setMenuOpen]     = useState(false)
-  const [activeLink,   setActiveLink]   = useState('#accueil')
+  const [scrolled,   setScrolled]   = useState(false)
+  const [menuOpen,   setMenuOpen]   = useState(false)
+  const [activeLink, setActiveLink] = useState('#accueil')
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 40)
@@ -20,7 +18,6 @@ export default function Navbar() {
     return () => window.removeEventListener('scroll', onScroll)
   }, [])
 
-  // Ferme le menu mobile au redimensionnement
   useEffect(() => {
     const onResize = () => { if (window.innerWidth > 768) setMenuOpen(false) }
     window.addEventListener('resize', onResize)
@@ -64,15 +61,6 @@ export default function Navbar() {
           </ul>
         </nav>
 
-        {/* CTA desktop */}
-        <a
-          href="#contact"
-          className="btn btn-primary navbar__cta"
-          onClick={(e) => { e.preventDefault(); handleNavClick('#contact') }}
-        >
-          Nous contacter
-        </a>
-
         {/* Burger mobile */}
         <button
           className={`navbar__burger${menuOpen ? ' navbar__burger--open' : ''}`}
@@ -98,15 +86,6 @@ export default function Navbar() {
               </a>
             </li>
           ))}
-          <li>
-            <a
-              href="#contact"
-              className="btn btn-primary navbar__mobile-cta"
-              onClick={(e) => { e.preventDefault(); handleNavClick('#contact') }}
-            >
-              Nous contacter
-            </a>
-          </li>
         </ul>
       </div>
     </header>
