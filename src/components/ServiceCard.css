@@ -1,0 +1,120 @@
+.service-card {
+  background: var(--color-primary);
+  border: none;
+  border-radius: var(--radius-md);
+  padding: var(--space-8);
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(46, 134, 193, 0.25);
+  transition: all var(--transition-normal);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  animation: fadeInUp 0.6s ease both;
+}
+
+.service-card:hover {
+  box-shadow: 0 8px 32px rgba(46, 134, 193, 0.4);
+  transform: translateY(-4px);
+}
+
+.service-card--green {
+  background: var(--color-primary);
+}
+
+.service-card--green:hover {
+  box-shadow: 0 8px 32px rgba(46, 134, 193, 0.4);
+}
+
+/* ── En-tête ── */
+.service-card__header {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.service-card__icon-wrap {
+  width: 48px;
+  height: 48px;
+  border-radius: var(--radius-sm);
+  background: rgba(255, 255, 255, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.service-card__icon {
+  font-size: 1.5rem;
+  line-height: 1;
+}
+
+.service-card__tag {
+  font-size: var(--font-size-xs);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #fff;
+  background: var(--color-secondary);
+  padding: var(--space-1) var(--space-3);
+  border-radius: var(--radius-sm);
+}
+
+/* ── Titre ── */
+.service-card__title {
+  font-size: var(--font-size-lg);
+  font-weight: 700;
+  color: #fff;
+  line-height: 1.3;
+}
+
+/* ── Description ── */
+.service-card__desc {
+  font-size: var(--font-size-sm);
+  color: rgba(255, 255, 255, 0.88);
+  line-height: 1.7;
+}
+
+/* ── Points ── */
+.service-card__points {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  margin-top: auto;
+  padding-top: var(--space-2);
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.service-card__point {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-3);
+  font-size: var(--font-size-sm);
+  color: rgba(255, 255, 255, 0.9);
+  line-height: 1.5;
+}
+
+.service-card__point-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #fff;
+  flex-shrink: 0;
+  margin-top: 6px;
+}
+
+/* ── Barre décorative ── */
+.service-card__bar {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: rgba(255, 255, 255, 0.4);
+  opacity: 0;
+  transition: opacity var(--transition-normal);
+}
+
+.service-card:hover .service-card__bar {
+  opacity: 1;
+}

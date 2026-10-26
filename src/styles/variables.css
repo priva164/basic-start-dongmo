@@ -1,0 +1,70 @@
+:root {
+  /* ── Palette principale extraite du logo AFMARKET ── */
+  --color-primary:        #2E86C1;   /* Bleu logo principal */
+  --color-primary-dark:   #1A5F9A;   /* Bleu foncé (hover, ombres) */
+  --color-primary-light:  #5BA8D8;   /* Bleu clair (accents subtils) */
+  --color-secondary:      #7DC243;   /* Vert logo (accents, badges) */
+  --color-secondary-dark: #5FA030;   /* Vert foncé */
+
+  /* ── Fonds et surfaces ── */
+  --color-background:     #FFFFFF;   /* Blanc pur */
+  --color-surface:        #F4F7FB;   /* Blanc légèrement bleuté */
+  --color-surface-alt:    #EBF4FD;   /* Surface bleue très claire */
+
+  /* ── Textes ── */
+  --color-text:           #1A2B3C;   /* Texte principal foncé */
+  --color-muted:          #64748B;   /* Texte secondaire gris */
+  --color-light:          #94A3B8;   /* Texte très léger */
+
+  /* ── Bordures et séparateurs ── */
+  --color-border:         #E2E8F0;   /* Gris clair */
+  --color-border-focus:   #2E86C1;   /* Bleu au focus */
+
+  /* ── Ombres ── */
+  --shadow-sm:   0 1px 3px rgba(46, 134, 193, 0.08);
+  --shadow-md:   0 4px 16px rgba(46, 134, 193, 0.12);
+  --shadow-lg:   0 8px 32px rgba(46, 134, 193, 0.16);
+  --shadow-card: 0 2px 12px rgba(26, 43, 60, 0.08);
+
+  /* ── Typographie ── */
+  --font-family:   'Inter', system-ui, -apple-system, sans-serif;
+  --font-size-xs:  0.75rem;
+  --font-size-sm:  0.875rem;
+  --font-size-base: 1rem;
+  --font-size-lg:  1.125rem;
+  --font-size-xl:  1.25rem;
+  --font-size-2xl: 1.5rem;
+  --font-size-3xl: 1.875rem;
+  --font-size-4xl: 2.25rem;
+  --font-size-5xl: 3rem;
+
+  /* ── Espacements ── */
+  --space-1:  0.25rem;
+  --space-2:  0.5rem;
+  --space-3:  0.75rem;
+  --space-4:  1rem;
+  --space-5:  1.25rem;
+  --space-6:  1.5rem;
+  --space-8:  2rem;
+  --space-10: 2.5rem;
+  --space-12: 3rem;
+  --space-16: 4rem;
+  --space-20: 5rem;
+  --space-24: 6rem;
+
+  /* ── Rayons ── */
+  --radius-sm:  6px;
+  --radius-md:  12px;
+  --radius-lg:  16px;
+  --radius-xl:  24px;
+  --radius-full: 9999px;
+
+  /* ── Transitions ── */
+  --transition-fast:   150ms ease;
+  --transition-normal: 250ms ease;
+  --transition-slow:   400ms ease;
+
+  /* ── Largeur maximale ── */
+  --max-width: 1200px;
+  --max-width-sm: 768px;
+}

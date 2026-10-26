@@ -1,0 +1,85 @@
+/* ── Tabs ── */
+.gallery__tabs {
+  display: flex;
+  gap: var(--space-2);
+  justify-content: center;
+  margin-bottom: var(--space-10);
+  flex-wrap: wrap;
+}
+
+.gallery__tab {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-2) var(--space-5);
+  border-radius: var(--radius-full);
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  color: var(--color-muted);
+  background: var(--color-background);
+  border: 1px solid var(--color-border);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.gallery__tab:hover {
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+}
+
+.gallery__tab--active {
+  background: var(--color-primary);
+  color: #fff;
+  border-color: var(--color-primary);
+}
+
+.gallery__tab-count {
+  background: rgba(255,255,255,0.25);
+  border-radius: var(--radius-full);
+  padding: 1px 7px;
+  font-size: var(--font-size-xs);
+  font-weight: 700;
+}
+
+.gallery__tab--active .gallery__tab-count {
+  background: rgba(255,255,255,0.25);
+}
+
+.gallery__tab:not(.gallery__tab--active) .gallery__tab-count {
+  background: var(--color-surface);
+  color: var(--color-muted);
+}
+
+/* ── Grille ── */
+.gallery__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-3);
+}
+
+/* ── Voir plus ── */
+.gallery__more {
+  display: flex;
+  justify-content: center;
+  margin-top: var(--space-10);
+}
+
+/* ── Responsive ── */
+@media (max-width: 1024px) {
+  .gallery__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .gallery__grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-2);
+  }
+}
+
+@media (max-width: 400px) {
+  .gallery__grid {
+    grid-template-columns: 1fr;
+  }
+}
